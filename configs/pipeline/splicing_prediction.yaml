@@ -1,0 +1,21 @@
+# @package _global_
+defaults:
+  - /trainer: default
+  - /loader: default
+  - /dataset: splicing_prediction
+  - /task: multiclass_classification
+  - /optimizer: adamw
+  - /scheduler: plateau
+  - /callbacks: [base, checkpoint]
+
+train:
+  monitor: val/topk_acc # Needed for plateau scheduler
+  mode: max
+
+encoder: id
+
+# we need this for classification!
+decoder:
+  _name_: sequence
+  # l_output: 5000
+  mode: first

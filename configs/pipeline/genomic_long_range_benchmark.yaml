@@ -1,0 +1,20 @@
+# @package _global_
+defaults:
+  - /trainer: default
+  - /loader: default
+  - /dataset: genomic_long_range_benchmark
+  - /task: multilabel_regression
+  - /optimizer: adamw
+  - /scheduler: plateau
+  - /callbacks: [base, checkpoint]
+
+train:
+  monitor: val/pearsonr # Needed for plateau scheduler
+  mode: max
+
+encoder: id
+
+# we need this for classification!
+decoder:
+  _name_: sequence_cage
+  mode: last

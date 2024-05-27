@@ -1,0 +1,6 @@
+# _target_: tasks.tasks.MultiClass
+_name_: base
+loss: mse
+metrics:
+  - pearsonr
+torchmetrics: null

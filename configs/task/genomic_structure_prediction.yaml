@@ -1,0 +1,5 @@
+_name_: genomic_structure_prediction
+loss: genomic_structure_loss
+metrics:
+  - genomic_structure_loss
+torchmetrics: null
