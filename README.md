@@ -33,7 +33,7 @@
 OpenGenome is a comprehensive benchmark for evaluating genomic foundation model, encompassing a broad spectrum of methods and diverse tasks, ranging from predicting gene location and function, identifying regulatory elements, and studying species evolution. OpenGenome offers a modular and extensible framework, excelling in user-friendliness, organization, and comprehensiveness. The codebase is organized into three abstracted layers, namely the core layer, algorithm layer, and user interface layer, arranged from the bottom to the top.
 
 <p align="center" width="100%">
-  <img src='/liuzicheng/ljh/hyena-dna/assets/architecture.png' width="90%">
+  <img src='assets/architecture.png' width="90%">
 </p>
 <!-- <p align="center" width="100%">
   <img src='https://github-production-user-asset-6210df.s3.amazonaws.com/44519745/246222226-61e6b8e8-959c-4bb3-a1cd-c994b423de3f.png' width="90%">
