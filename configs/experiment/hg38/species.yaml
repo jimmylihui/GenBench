@@ -60,7 +60,7 @@ dataset:
   # max_length_val: ${dataset.max_length}
   # max_length_test: ${dataset.max_length}
   tokenizer_name: char
-  tokenizer_path: /liuzicheng/ljh/hyena-dna/weight/hyenadna/hyenadna-large-1m-seqlen
+  tokenizer_path: /hyena-dna/weight/hyenadna/hyenadna-large-1m-seqlen
   add_eos: false
   rc_aug: false  # reverse complement augmentation
   return_mask: True
@@ -90,7 +90,7 @@ train:
   # pretrained_model_path: null
   # pretrained_model_state_hook: null
   # # Pretrained
-  pretrained_model_path: /liuzicheng/ljh/hyena-dna/weight/hyenadna/hyenadna-large-1m-seqlen
+  pretrained_model_path: /hyena-dna/weight/hyenadna/hyenadna-large-1m-seqlen
   pretrained_model_state_hook:
     _name_: load_backbone
     freeze_backbone: false  # seems to work much better if false (ie finetune entire model)

@@ -59,7 +59,7 @@ train:
   # pretrained_model_path: null
   # pretrained_model_state_hook: null
   # # Pretrained
-  pretrained_model_path: /local-scratch/nigam/projects/mwornow/projects/safari-internal/outputs/2023-04-14/8_256_160.ckpt
+  pretrained_model_path: None
   pretrained_model_state_hook:
     _name_: load_backbone
     freeze_backbone: false  # seems to work much better if false (ie finetune entire model)

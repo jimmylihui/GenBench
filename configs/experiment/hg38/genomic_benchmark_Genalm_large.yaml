@@ -95,7 +95,7 @@ train:
   remove_test_loader_in_eval: true  # no test set in this benchmark
   pretrained_model_strict_load: False  # false allows encoder/decoder to be used if new model uses it
   # for loading backbone and not head, requires both of these flags below
-  pretrained_model_path: /liuzicheng/ljh/hyena-dna/weight/genalm/gena-lm-bert-large-t2t
+  pretrained_model_path: /hyena-dna/weight/genalm/gena-lm-bert-large-t2t
   pretrained_model_state_hook:
     _name_: load_backbone
     freeze_backbone: false  # seems to work much better if false (ie finetune entire model)

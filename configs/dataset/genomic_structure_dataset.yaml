@@ -1,6 +1,6 @@
 _name_: genomic_structure_dataset
 dataset_name: h1esc
-dest_path: /liuzicheng/ljh/hyena-dna/data/genomic_structure/resources/resources
+dest_path: /data/genomic_structure/resources/resources
 max_length: 1024
 d_output: ${.${.dataset_name}.classes}
 total_size: 100

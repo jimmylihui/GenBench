@@ -231,18 +231,7 @@ class SequenceLightningModule(pl.LightningModule):
         #     state_dict = model_state_hook(self.model, state_dict)
         if(self.config.dataset.tokenizer_name=='NT' ):
             self.model.backbone=AutoModelForMaskedLM.from_pretrained(state_dict, trust_remote_code=True)
-        elif(self.config.dataset.tokenizer_name=='evo'):
-            model_name = '/liuzicheng/ljh/hyena-dna/weight/evo/evo-1-8k-base'
-
-            model_config = AutoConfig.from_pretrained(model_name, trust_remote_code=True)
-            model_config.use_cache = True
-
-            model = AutoModelForCausalLM.from_pretrained(
-                model_name,
-                config=model_config,
-                trust_remote_code=True,
-            )   
-            self.model.backbone=model
+        
         elif(self.config.dataset.tokenizer_name=='orca'):
             self.model.backbone=Orca()
         elif(self.config.dataset.tokenizer_name=='CNN'):

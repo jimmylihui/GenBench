@@ -205,7 +205,7 @@ def genomic_structure_hff_mse(logit,y,ignore_index=-100):
         target=torch.rand_like(target)
 
     normmat_bydist = np.exp(
-        np.load("/liuzicheng/ljh/orca/resources/resources/4DNFI643OYP9.rebinned.mcool.expected.res1000.npy")
+        np.load("/orca/resources/resources/4DNFI643OYP9.rebinned.mcool.expected.res1000.npy")
 
     )[:length]
     normmat = normmat_bydist[np.abs(np.arange(length)[:, None] - np.arange(length)[None, :])]
@@ -237,7 +237,7 @@ def genomic_structure_hff_corr(logit,y,ignore_index=-100):
     target=y
     length=int(pred.shape[-1])
     normmat_bydist = np.exp(
-        np.load("/liuzicheng/ljh/orca/resources/resources/4DNFI643OYP9.rebinned.mcool.expected.res1000.npy")        
+        np.load("/orca/resources/resources/4DNFI643OYP9.rebinned.mcool.expected.res1000.npy")        
 
     )[:length]
     normmat = normmat_bydist[np.abs(np.arange(length)[:, None] - np.arange(length)[None, :])]
@@ -268,7 +268,7 @@ def genomic_structure_h1esc_corr(logit,y,ignore_index=-100):
     target=y
     length=int(pred.shape[-1])
     normmat_bydist = np.exp(
-        np.load("/liuzicheng/ljh/orca/resources/resources/4DNFI9GMP2J8.rebinned.mcool.expected.res1000.npy")        
+        np.load("/orca/resources/resources/4DNFI9GMP2J8.rebinned.mcool.expected.res1000.npy")        
 
     )[:length]
     normmat = normmat_bydist[np.abs(np.arange(length)[:, None] - np.arange(length)[None, :])]
@@ -299,7 +299,7 @@ def genomic_structure_hctnoc_corr(logit,y,ignore_index=-100):
     target=y
     length=int(pred.shape[-1])
     normmat_bydist = np.exp(
-        np.load("/liuzicheng/ljh/orca/resources/resources/4DNFILP99QJS.HCT_auxin6h.rebinned.mcool.expected.res1000.npy")        
+        np.load("/orca/resources/resources/4DNFILP99QJS.HCT_auxin6h.rebinned.mcool.expected.res1000.npy")        
 
     )[:length]
     normmat = normmat_bydist[np.abs(np.arange(length)[:, None] - np.arange(length)[None, :])]
@@ -345,7 +345,7 @@ def genomic_structure_hff_loss(logit,y,ignore_index=-100):
         target=torch.rand_like(target)
     
     normmat_bydist = np.exp(
-        np.load("/liuzicheng/ljh/orca/resources/resources/4DNFI643OYP9.rebinned.mcool.expected.res1000.npy")
+        np.load("/orca/resources/resources/4DNFI643OYP9.rebinned.mcool.expected.res1000.npy")
 
     )[:length]
     normmat = normmat_bydist[np.abs(np.arange(length)[:, None] - np.arange(length)[None, :])]
@@ -381,7 +381,7 @@ def genomic_structure_h1esc_loss(logit,y,ignore_index=-100):
         target=torch.rand_like(target)
     
     normmat_bydist = np.exp(
-        np.load("/liuzicheng/ljh/orca/resources/resources/4DNFI9GMP2J8.rebinned.mcool.expected.res1000.npy")
+        np.load("/orca/resources/resources/4DNFI9GMP2J8.rebinned.mcool.expected.res1000.npy")
 
     )[:length]
     normmat = normmat_bydist[np.abs(np.arange(length)[:, None] - np.arange(length)[None, :])]
@@ -417,7 +417,7 @@ def genomic_structure_hctnoc_loss(logit,y,ignore_index=-100):
         target=torch.rand_like(target)
     
     normmat_bydist = np.exp(
-        np.load("/liuzicheng/ljh/orca/resources/resources/4DNFILP99QJS.HCT_auxin6h.rebinned.mcool.expected.res1000.npy")
+        np.load("/orca/resources/resources/4DNFILP99QJS.HCT_auxin6h.rebinned.mcool.expected.res1000.npy")
 
     )[:length]
     normmat = normmat_bydist[np.abs(np.arange(length)[:, None] - np.arange(length)[None, :])]

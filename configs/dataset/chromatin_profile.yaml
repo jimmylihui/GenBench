@@ -1,8 +1,8 @@
 _name_: chromatin_profile
 dataset_name: chromatin_profile
-ref_genome_path: '/liuzicheng/ljh/hyena-dna/data/hg38/hg38.ml.fa'
+ref_genome_path: '/data/hg38/hg38.ml.fa'
 ref_genome_version: 'hg38'
-data_path: '/liuzicheng/ljh/hyena-dna/data/chromatin_profile'
+data_path: '/data/chromatin_profile'
 max_length: 1024
 d_output: 919 
 use_padding: True

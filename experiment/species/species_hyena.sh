@@ -10,11 +10,11 @@ cd ..
 for length in 512 1000 2000 3000 30000; do
     python -m train experiment=hg38/species \
         model.d_model=256 \
-        train.pretrained_model_path=/liuzicheng/ljh/hyena-dna/weight/hyenadna/hyenadna-large-1m-seqlen \
+        train.pretrained_model_path=/weight/hyenadna/hyenadna-large-1m-seqlen \
         optimizer.lr=6e-5 \
         wandb.mode=offline \
         dataset.tokenizer_name=hyena \
-        dataset.tokenizer_path=/liuzicheng/ljh/hyena-dna/weight/hyenadna/hyenadna-large-1m-seqlen \
+        dataset.tokenizer_path=/weight/hyenadna/hyenadna-large-1m-seqlen \
         dataset.max_length=$length \
         dataset.total_size=1000 \
         trainer.devices=5 \
@@ -27,11 +27,11 @@ for length in 512 1000 2000 3000 30000; do
     
     python -m train experiment=hg38/species \
         model.d_model=256 \
-        train.pretrained_model_path=/liuzicheng/ljh/hyena-dna/weight/hyenadna/hyenadna-medium-450k-seqlen \
+        train.pretrained_model_path=/weight/hyenadna/hyenadna-medium-450k-seqlen \
         optimizer.lr=6e-5 \
         wandb.mode=offline \
         dataset.tokenizer_name=hyena \
-        dataset.tokenizer_path=/liuzicheng/ljh/hyena-dna/weight/hyenadna/hyenadna-medium-450k-seqlen \
+        dataset.tokenizer_path=/weight/hyenadna/hyenadna-medium-450k-seqlen \
         dataset.max_length=$length \
         dataset.total_size=1000 \
         trainer.devices=5 \
@@ -45,11 +45,11 @@ for length in 512 1000 2000 3000 30000; do
     
     python -m train experiment=hg38/species \
         model.d_model=256 \
-        train.pretrained_model_path=/liuzicheng/ljh/hyena-dna/weight/hyenadna/hyenadna-medium-160k-seqlen \
+        train.pretrained_model_path=/weight/hyenadna/hyenadna-medium-160k-seqlen \
         optimizer.lr=6e-5 \
         wandb.mode=offline \
         dataset.tokenizer_name=hyena \
-        dataset.tokenizer_path=/liuzicheng/ljh/hyena-dna/weight/hyenadna/hyenadna-medium-160k-seqlen \
+        dataset.tokenizer_path=/weight/hyenadna/hyenadna-medium-160k-seqlen \
         dataset.max_length=$length \
         dataset.total_size=1000 \
         trainer.devices=5 \
@@ -62,11 +62,11 @@ for length in 512 1000 2000 3000 30000; do
     
     python -m train experiment=hg38/species \
         model.d_model=256 \
-        train.pretrained_model_path=/liuzicheng/ljh/hyena-dna/weight/hyenadna/hyenadna-small-32k-seqlen \
+        train.pretrained_model_path=/weight/hyenadna/hyenadna-small-32k-seqlen \
         optimizer.lr=6e-5 \
         wandb.mode=offline \
         dataset.tokenizer_name=hyena \
-        dataset.tokenizer_path=/liuzicheng/ljh/hyena-dna/weight/hyenadna/hyenadna-small-32k-seqlen \
+        dataset.tokenizer_path=/weight/hyenadna/hyenadna-small-32k-seqlen \
         dataset.max_length=$length \
         dataset.total_size=1000 \
         trainer.devices=5 \

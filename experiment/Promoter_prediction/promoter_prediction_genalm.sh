@@ -8,13 +8,13 @@ for dataset in  0_txt; do
         for max_length in 512 1000 2000 3000; do
             python -m train experiment=hg38/GUE \
                     model.d_model=768 \
-                    train.pretrained_model_path=/liuzicheng/ljh/hyena-dna/weight/genalm/gena-lm-bigbird-base-t2t \
+                    train.pretrained_model_path=/weight/genalm/gena-lm-bigbird-base-t2t \
                     dataset.dataset_name=$dataset \
                     dataset.tokenizer_name=genalm \
                     model.layer._name_=genalm \
                     optimizer.lr=$lr \
                     dataset=promoter_prediction \
-                    dataset.tokenizer_path=/liuzicheng/ljh/hyena-dna/tokenizer/gena-lm-bigbird-base-t2t \
+                    dataset.tokenizer_path=/tokenizer/gena-lm-bigbird-base-t2t \
                     dataset.max_length=$max_length \
                     trainer.devices=5 \
                     dataset.batch_size=1 \

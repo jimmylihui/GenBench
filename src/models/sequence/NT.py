@@ -46,7 +46,7 @@ class DNAEmbeddingNT(nn.Module, GenerationMixin):
         #     **factory_kwargs, **kwargs
         # )
         
-        # self.backbone=AutoModel.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/hyenadna/hyenadna-small-32k-seqlen', trust_remote_code=True)
+        
         # self.backbone=nn.Identity
         if process_group is None:
             self.lm_head = nn.Linear(d_model, vocab_size, bias=False, **factory_kwargs)

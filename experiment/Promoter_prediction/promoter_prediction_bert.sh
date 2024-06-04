@@ -6,13 +6,13 @@ for dataset in  0_txt; do
     for lr in 3e-5; do
         python -m train experiment=hg38/GUE \
                 model.d_model=768 \
-                train.pretrained_model_path=/liuzicheng/ljh/hyena-dna/weight/dnabert/dnabert3/3-new-12w-0 \
+                train.pretrained_model_path=/weight/dnabert/dnabert3/3-new-12w-0 \
                 dataset.dataset_name=$dataset \
                 dataset.tokenizer_name=bert \
                 model.layer._name_=bert \
                 optimizer.lr=$lr \
                 dataset=promoter_prediction \
-                dataset.tokenizer_path=/liuzicheng/ljh/hyena-dna/weight/dnabert/dnabert3/3-new-12w-0 \
+                dataset.tokenizer_path=/weight/dnabert/dnabert3/3-new-12w-0 \
                 dataset.max_length=512 \
                 trainer.devices=5 \
                 dataset.batch_size=14 \

@@ -23,7 +23,7 @@ dataset:
   # max_length_val: ${dataset.max_length}
   # max_length_test: ${dataset.max_length}
   tokenizer_name: char
-  tokenizer_path: /liuzicheng/ljh/hyena-dna/weight/hyenadna/hyenadna-large-1m-seqlen
+  tokenizer_path: /hyena-dna/weight/hyenadna/hyenadna-large-1m-seqlen
   add_eos: false
   rc_aug: false  # reverse complement augmentation
   return_mask: false

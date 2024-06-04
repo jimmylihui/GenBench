@@ -172,7 +172,7 @@ class CagePredictionDataset(torch.utils.data.Dataset):
             "InstaDeepAI/genomics-long-range-benchmark",
             task_name='cage_prediction',
             sequence_length=self.max_length,
-            cache_dir='/liuzicheng/ljh/hyena-dna/data/genomic_long_range',
+            cache_dir='data/genomic_long_range',
             trust_remote_code=True,
         )
         train_dataset = dataset['train']
@@ -277,7 +277,7 @@ class BulkRNAExpressionDataset(torch.utils.data.Dataset):
             "InstaDeepAI/genomics-long-range-benchmark",
             task_name='bulk_rna_expression',
             sequence_length=2048,
-            cache_dir='/liuzicheng/ljh/hyena-dna/data/genomic_long_range',
+            cache_dir='/data/genomic_long_range',
         )
         train_dataset = dataset['train']
         test_dataset = dataset['test']
@@ -397,7 +397,7 @@ class VariantEffectGeneExpression(torch.utils.data.Dataset):
             "InstaDeepAI/genomics-long-range-benchmark",
             task_name='variant_effect_gene_expression',
             sequence_length=2048,
-            cache_dir='/liuzicheng/ljh/hyena-dna/data/genomic_long_range',
+            cache_dir='/data/genomic_long_range',
         )
         train_dataset = dataset['train']
         val_dataset = dataset['validation']

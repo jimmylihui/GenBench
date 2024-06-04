@@ -1,6 +1,6 @@
 _name_: genomic_long_range_benchmark
 dataset_name: bulk_rna_expression
-dest_path: /liuzicheng/ljh/hyena-dna/data/genomics-long-range-benchmark
+dest_path: /data/genomics-long-range-benchmark
 max_length: 2048
 d_output: ${.${.dataset_name}.classes}
 #l_output:max_length/128

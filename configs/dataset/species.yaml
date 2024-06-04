@@ -1,6 +1,6 @@
 _name_: species
 dataset_name: species
-species_dir: '/liuzicheng/ljh/hyena-dna/data/species'
+species_dir: '/data/species'
 species: [human,mouse,hippo,pig,lemur]
 total_size: 1000
 max_length: 1024

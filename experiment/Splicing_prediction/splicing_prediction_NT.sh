@@ -1,7 +1,7 @@
 
 
 
-# python -m train experiment=hg38/species  model.d_model=256 train.pretrained_model_path=/liuzicheng/ljh/hyena-dna/weight/hyenadna/hyenadna-large-1m-seqlen dataset.dataset_name=$dataset optimizer.lr=6e-5 wandb.mode=offline dataset.max_length=1024 dataset.total_size=1000 trainer.devices=5 dataset.batch_size=8 wandb.id=species_hyenadna-large-1m-seqlen_1k callbacks.early_stopping.patience=100 trainer.max_epochs=200
+
 
 cd ..
 cd ..
@@ -10,11 +10,11 @@ cd ..
 for max_length in 300 600 900 1200 1500 3000; do
         python -m train experiment=hg38/splicing_prediction \
                 model.d_model=1024 \
-                train.pretrained_model_path=/liuzicheng/ljh/hyena-dna/weight/nt/nucleotide-transformer-v2-500m-multi-species \
+                train.pretrained_model_path=/weight/nt/nucleotide-transformer-v2-500m-multi-species \
                 optimizer.lr=1e-5 \
                 wandb.mode=offline \
                 dataset.tokenizer_name=NT \
-                dataset.tokenizer_path=/liuzicheng/ljh/hyena-dna/weight/nt/nucleotide-transformer-v2-500m-multi-species/tokenizer \
+                dataset.tokenizer_path=/weight/nt/nucleotide-transformer-v2-500m-multi-species/tokenizer \
                 dataset.max_length=$max_length \
                 dataset.l_output=$(expr $max_length / 3) \
                 trainer.devices=5 \
@@ -30,11 +30,11 @@ for max_length in 300 600 900 1200 1500 3000; do
         
         python -m train experiment=hg38/splicing_prediction \
                 model.d_model=768 \
-                train.pretrained_model_path=/liuzicheng/ljh/hyena-dna/weight/nt/nucleotide-transformer-v2-250m-multi-species \
+                train.pretrained_model_path=/weight/nt/nucleotide-transformer-v2-250m-multi-species \
                 optimizer.lr=1e-5 \
                 wandb.mode=offline \
                 dataset.tokenizer_name=NT \
-                dataset.tokenizer_path=/liuzicheng/ljh/hyena-dna/weight/nt/nucleotide-transformer-v2-250m-multi-species/tokenizer \
+                dataset.tokenizer_path=/weight/nt/nucleotide-transformer-v2-250m-multi-species/tokenizer \
                 dataset.max_length=$max_length \
                 dataset.l_output=$(expr $max_length / 3) \
                 trainer.devices=5 \
@@ -50,11 +50,11 @@ for max_length in 300 600 900 1200 1500 3000; do
         
         python -m train experiment=hg38/splicing_prediction \
                 model.d_model=512 \
-                train.pretrained_model_path=/liuzicheng/ljh/hyena-dna/weight/nt/nucleotide-transformer-v2-100m-multi-species \
+                train.pretrained_model_path=/weight/nt/nucleotide-transformer-v2-100m-multi-species \
                 optimizer.lr=1e-5 \
                 wandb.mode=offline \
                 dataset.tokenizer_name=NT \
-                dataset.tokenizer_path=/liuzicheng/ljh/hyena-dna/weight/nt/nucleotide-transformer-v2-100m-multi-species/tokenizer \
+                dataset.tokenizer_path=/weight/nt/nucleotide-transformer-v2-100m-multi-species/tokenizer \
                 dataset.max_length=$max_length \
                 dataset.l_output=$(expr $max_length / 3) \
                 trainer.devices=5 \
@@ -70,11 +70,11 @@ for max_length in 300 600 900 1200 1500 3000; do
         
         python -m train experiment=hg38/splicing_prediction \
                 model.d_model=512 \
-                train.pretrained_model_path=/liuzicheng/ljh/hyena-dna/weight/nt/nucleotide-transformer-v2-50m-multi-species \
+                train.pretrained_model_path=/weight/nt/nucleotide-transformer-v2-50m-multi-species \
                 optimizer.lr=1e-5 \
                 wandb.mode=offline \
                 dataset.tokenizer_name=NT \
-                dataset.tokenizer_path=/liuzicheng/ljh/hyena-dna/weight/nt/nucleotide-transformer-v2-50m-multi-species/tokenizer \
+                dataset.tokenizer_path=/weight/nt/nucleotide-transformer-v2-50m-multi-species/tokenizer \
                 dataset.max_length=$max_length \
                 dataset.l_output=$(expr $max_length / 3) \
                 trainer.devices=5 \

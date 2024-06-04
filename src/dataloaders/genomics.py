@@ -128,7 +128,7 @@ class HG38(SequenceDataset):
             )
             print("**Using 3-mer tokenizer**")
         elif self.tokenizer_name == 'hyena':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/hyenadna/hyenadna-large-1m-seqlen',trust_remote_code=True)
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
             print("**Using hyena-dna tokenizer**")
         elif self.tokenizer_name == 'bert':
             # self.tokenizer = DNATokenizer.from_pretrained(
@@ -136,7 +136,7 @@ class HG38(SequenceDataset):
             #     do_lower_case=False,
             #     cache_dir='/usr/data/3-new-12w-0',
             # )
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/dnabert/dnabert3/3-new-12w-0')
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using bert tokenizer**")
         elif self.tokenizer_name == 'bert2':
             # self.tokenizer = DNATokenizer.from_pretrained(
@@ -144,11 +144,11 @@ class HG38(SequenceDataset):
             #     do_lower_case=False,
             #     cache_dir='/usr/data/3-new-12w-0',
             # )
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/dnabert2')
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using bert_2 tokenizer**")
         
         elif self.tokenizer_name=='NT':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/nt/nucleotide-transformer-v2-50m-multi-species')
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using NT tokenizer**")
         elif self.tokenizer_name == 'genslm':
             model=GenSLM("genslm_25M_patric", model_cache_dir="/usr/data/genslm/weight")
@@ -162,14 +162,14 @@ class HG38(SequenceDataset):
             # )
             # print("**Using 3-mer tokenizer**")
         elif self.tokenizer_name == 'genalm':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/genalm/gena-lm-bert-base-t2t')
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using genalm tokenizer**")
         elif self.tokenizer_name == 'evo':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/evo/evo-113k',trust_remote_code=True)
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
             print("**Using evo tokenizer**")
         
         elif self.tokenizer_name == 'mamba':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/mamba',trust_remote_code=True)
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
             print("**Using mamba tokenizer**")
 
         self.vocab_size = len(self.tokenizer)
@@ -350,7 +350,7 @@ class PlantGenomicBenchmark(HG38):
             )
             print("**Using 3-mer tokenizer**")
         elif self.tokenizer_name == 'hyena':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/hyenadna/hyenadna-large-1m-seqlen',trust_remote_code=True)
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
             print("**Using hyena-dna tokenizer**")
         elif self.tokenizer_name == 'bert':
             # self.tokenizer = DNATokenizer.from_pretrained(
@@ -358,7 +358,7 @@ class PlantGenomicBenchmark(HG38):
             #     do_lower_case=False,
             #     cache_dir='/usr/data/3-new-12w-0',
             # )
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/dnabert/dnabert3/3-new-12w-0')
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using bert tokenizer**")
         elif self.tokenizer_name == 'bert2':
             # self.tokenizer = DNATokenizer.from_pretrained(
@@ -366,11 +366,11 @@ class PlantGenomicBenchmark(HG38):
             #     do_lower_case=False,
             #     cache_dir='/usr/data/3-new-12w-0',
             # )
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/dnabert2')
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using bert_2 tokenizer**")
         
         elif self.tokenizer_name=='NT':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/nt/nucleotide-transformer-v2-50m-multi-species')
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using NT tokenizer**")
         elif self.tokenizer_name == 'genslm':
             model=GenSLM("genslm_25M_patric", model_cache_dir="/usr/data/genslm/weight")
@@ -384,13 +384,13 @@ class PlantGenomicBenchmark(HG38):
             # )
             # print("**Using 3-mer tokenizer**")
         elif self.tokenizer_name == 'genalm':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/genalm/gena-lm-bert-base-t2t')
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using genalm tokenizer**")
         elif self.tokenizer_name == 'evo':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/evo/evo-113k',trust_remote_code=True)
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
             print("**Using evo tokenizer**")
         elif self.tokenizer_name == 'mamba':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/mamba',trust_remote_code=True)
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
             print("**Using mamba tokenizer**")
         # Create all splits: torch datasets (only train/test in this benchmark)
         self.dataset_train, self.dataset_val = [
@@ -663,12 +663,7 @@ class GenomicLongRangeBenchmark(HG38):
         elif self.tokenizer_name == 'Enformer':
             self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
             print("**Using Enformer tokenizer**")
-        # self.dataset = load_dataset(
-        #     "InstaDeepAI/genomics-long-range-benchmark",
-        #     task_name=self.dataset_name,
-        #     sequence_length=self.max_length,
-        #     cache_dir='/liuzicheng/ljh/hyena-dna/data/genomic_long_range',
-        # )
+        
         if self.dataset_name=='cage_prediction':
             self.dataset_train, self.dataset_val = [
                 CagePredictionDataset(split=split,
@@ -954,7 +949,7 @@ class promoter_prediction(HG38):
             self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using genalm tokenizer**")
         elif self.tokenizer_name == 'evo':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/evo/evo-113k',trust_remote_code=True)
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
             print("**Using evo tokenizer**")
         elif self.tokenizer_name == 'mamba':
             self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
@@ -1229,7 +1224,7 @@ class mouse(HG38):
             self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using genalm tokenizer**")
         elif self.tokenizer_name == 'evo':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/evo/evo-113k',trust_remote_code=True)
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
             print("**Using evo tokenizer**")
         
         elif self.tokenizer_name == 'mamba':
@@ -1367,7 +1362,7 @@ class prom(HG38):
             self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using genalm tokenizer**")
         elif self.tokenizer_name == 'evo':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/evo/evo-113k',trust_remote_code=True)
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
             print("**Using evo tokenizer**")
         
         elif self.tokenizer_name == 'mamba':
@@ -1505,7 +1500,7 @@ class splice(HG38):
             self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using genalm tokenizer**")
         elif self.tokenizer_name == 'evo':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/evo/evo-113k',trust_remote_code=True)
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
             print("**Using evo tokenizer**")
         
         elif self.tokenizer_name == 'mamba':
@@ -1644,7 +1639,7 @@ class splicing_prediction(HG38):
             self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using genalm tokenizer**")
         elif self.tokenizer_name == 'evo':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/evo/evo-113k',trust_remote_code=True)
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
             print("**Using evo tokenizer**")
         
         elif self.tokenizer_name == 'mamba':
@@ -1786,7 +1781,7 @@ class drosophila_enhancer_activity(HG38):
             self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using genalm tokenizer**")
         elif self.tokenizer_name == 'evo':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/evo/evo-113k',trust_remote_code=True)
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
             print("**Using evo tokenizer**")
         
         elif self.tokenizer_name == 'mamba':
@@ -1927,7 +1922,7 @@ class tf(HG38):
             self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using genalm tokenizer**")
         elif self.tokenizer_name == 'evo':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/evo/evo-113k',trust_remote_code=True)
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
             print("**Using evo tokenizer**")
         
         elif self.tokenizer_name == 'mamba':
@@ -2064,7 +2059,7 @@ class virus(HG38):
             self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using genalm tokenizer**")
         elif self.tokenizer_name == 'evo':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/evo/evo-113k',trust_remote_code=True)
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
             print("**Using evo tokenizer**")
         
         elif self.tokenizer_name == 'mamba':
@@ -2163,7 +2158,7 @@ class NucleotideTransformer(HG38):
             )
             print("**Using 3-mer tokenizer**")
         elif self.tokenizer_name == 'hyena':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/hyenadna/hyenadna-large-1m-seqlen',trust_remote_code=True)
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
             print("**Using hyena-dna tokenizer**")
         elif self.tokenizer_name == 'bert':
             # self.tokenizer = DNATokenizer.from_pretrained(
@@ -2171,7 +2166,7 @@ class NucleotideTransformer(HG38):
             #     do_lower_case=False,
             #     cache_dir='/usr/data/3-new-12w-0',
             # )
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/dnabert/dnabert3/3-new-12w-0')
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using bert tokenizer**")
         elif self.tokenizer_name == 'bert2':
             # self.tokenizer = DNATokenizer.from_pretrained(
@@ -2179,11 +2174,11 @@ class NucleotideTransformer(HG38):
             #     do_lower_case=False,
             #     cache_dir='/usr/data/3-new-12w-0',
             # )
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/dnabert2')
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using bert_2 tokenizer**")
         
         elif self.tokenizer_name=='NT':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/nt/nucleotide-transformer-v2-50m-multi-species')
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using NT tokenizer**")
         elif self.tokenizer_name == 'genslm':
             model=GenSLM("genslm_25M_patric", model_cache_dir="/usr/data/genslm/weight")
@@ -2197,14 +2192,14 @@ class NucleotideTransformer(HG38):
             # )
             # print("**Using 3-mer tokenizer**")
         elif self.tokenizer_name == 'genalm':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/genalm/gena-lm-bert-base-t2t')
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using genalm tokenizer**")
         elif self.tokenizer_name == 'evo':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/evo/evo-113k',trust_remote_code=True)
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
             print("**Using evo tokenizer**")
         
         elif self.tokenizer_name == 'mamba':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/mamba',trust_remote_code=True)
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
             print("**Using mamba tokenizer**")
         # Create all splits: torch datasets (only train/test in this benchmark)
         self.dataset_train, self.dataset_val = [
@@ -2333,7 +2328,7 @@ class ChromatinProfile(HG38):
             self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using genalm tokenizer**")
         elif self.tokenizer_name == 'evo':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/evo/evo-113k',trust_remote_code=True)
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
             print("**Using evo tokenizer**")
         
         elif self.tokenizer_name == 'mamba':
@@ -2361,33 +2356,7 @@ class ChromatinProfile(HG38):
             )
             for split in splits
         ]
-        # self.dataset_train=ChromatinProfileDataset(
-        #     '/liuzicheng/ljh/hyena-dna/data/chromatin_profile/train_data_1000.npy',
-        #     '/liuzicheng/ljh/hyena-dna/data/chromatin_profile/train_labels_1000.npy',
-        #     window_size=self.max_length,
-        #     tokenizer=self.tokenizer,
-        #     tokenzier_name=self.tokenizer_name,
-        #     use_padding=True,
-        #     return_mask=True
-        # )
-        # self.dataset_val=ChromatinProfileDataset(
-        #     '/liuzicheng/ljh/hyena-dna/data/chromatin_profile/valid_data_1000.npy',
-        #     '/liuzicheng/ljh/hyena-dna/data/chromatin_profile/valid_labels_1000.npy',
-        #     window_size=self.max_length,
-        #     tokenizer=self.tokenizer,
-        #     tokenzier_name=self.tokenizer_name,
-        #     use_padding=True,
-        #     return_mask=True
-        # )
-        # self.dataset_test=ChromatinProfileDataset(  
-        #     '/liuzicheng/ljh/hyena-dna/data/chromatin_profile/test_data_1000.npy',
-        #     '/liuzicheng/ljh/hyena-dna/data/chromatin_profile/test_labels_1000.npy',
-        #     window_size=self.max_length,
-        #     tokenizer=self.tokenizer,
-        #     tokenzier_name=self.tokenizer_name,
-        #     use_padding=True,
-        #     return_mask=True
-        # )
+        
 
 
 class Species(HG38):
@@ -2498,7 +2467,7 @@ class Species(HG38):
             self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using genalm tokenizer**")
         elif self.tokenizer_name == 'evo':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/evo/evo-113k',trust_remote_code=True)
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
             print("**Using evo tokenizer**")
         
         elif self.tokenizer_name == 'mamba':
@@ -2619,7 +2588,7 @@ class GenomicBenchmark_regression(HG38):
             )
             print("**Using 3-mer tokenizer**")
         elif self.tokenizer_name == 'hyena':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/hyenadna/hyenadna-large-1m-seqlen',trust_remote_code=True)
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
             print("**Using hyena-dna tokenizer**")
         elif self.tokenizer_name == 'bert':
             # self.tokenizer = DNATokenizer.from_pretrained(
@@ -2627,7 +2596,7 @@ class GenomicBenchmark_regression(HG38):
             #     do_lower_case=False,
             #     cache_dir='/usr/data/3-new-12w-0',
             # )
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/dnabert/dnabert3/3-new-12w-0')
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using bert tokenizer**")
         elif self.tokenizer_name == 'bert2':
             # self.tokenizer = DNATokenizer.from_pretrained(
@@ -2635,11 +2604,11 @@ class GenomicBenchmark_regression(HG38):
             #     do_lower_case=False,
             #     cache_dir='/usr/data/3-new-12w-0',
             # )
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/dnabert2')
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using bert_2 tokenizer**")
         
         elif self.tokenizer_name=='NT':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/nt/nucleotide-transformer-v2-50m-multi-species')
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using NT tokenizer**")
         elif self.tokenizer_name == 'genslm':
             model=GenSLM("genslm_25M_patric", model_cache_dir="/usr/data/genslm/weight")
@@ -2653,13 +2622,13 @@ class GenomicBenchmark_regression(HG38):
             # )
             # print("**Using 3-mer tokenizer**")
         elif self.tokenizer_name == 'genalm':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/genalm/gena-lm-bert-base-t2t')
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using genalm tokenizer**")
         elif self.tokenizer_name == 'evo':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/evo/evo-113k',trust_remote_code=True)
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
             print("**Using evo tokenizer**")
         elif self.tokenizer_name == 'mamba':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/mamba',trust_remote_code=True)
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
             print("**Using mamba tokenizer**")
         
         # Create all splits: torch datasets (only train/test in this benchmark)
@@ -2946,7 +2915,7 @@ class GenomicStructure(HG38):
             self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path)
             print("**Using genalm tokenizer**")
         elif self.tokenizer_name == 'evo':
-            self.tokenizer=AutoTokenizer.from_pretrained('/liuzicheng/ljh/hyena-dna/weight/evo/evo-113k',trust_remote_code=True)
+            self.tokenizer=AutoTokenizer.from_pretrained(self.tokenizer_path,trust_remote_code=True)
             print("**Using evo tokenizer**")
         
         elif self.tokenizer_name == 'mamba':

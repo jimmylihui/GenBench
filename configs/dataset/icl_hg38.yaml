@@ -1,6 +1,6 @@
 _name_: icl_hg38
-bed_file: '/home/workspace/eric/safari-internal/data/hg38/human-sequences.bed'
-fasta_file: '/home/workspace/eric/safari-internal/data/hg38/hg38.ml.fa'
+bed_file: 
+fasta_file: 
 dataset_name: icl_hg38
 tokenizer_name: null
 cache_dir: null

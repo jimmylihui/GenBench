@@ -311,40 +311,14 @@ class StructuredPredictionTask(MultiClass):
 
         
         #create folder if not exist
-        if not os.path.exists("/liuzicheng/ljh/hyena-dna/assets/png/"+model.layer['_name_']+"/"+decoder.__class__.__name__):
-            os.makedirs("/liuzicheng/ljh/hyena-dna/assets/png/"+model.layer['_name_']+"/"+decoder.__class__.__name__)
+        
         
 
         #run if prefix turn into train firstly
 
         self.account+=1
 
-        if prefix=='train' and self.account%100==0:
-            normmat_bydist = np.exp(
-                np.load("/liuzicheng/ljh/orca/resources/resources/4DNFI9GMP2J8.rebinned.mcool.expected.res1000.npy")
-            )[:6]
-            normmat = normmat_bydist[np.abs(np.arange(6)[:, None] - np.arange(6)[None, :])]
-            normmat_r = torch.from_numpy(normmat).float().cuda()
-            eps = torch.min(normmat_r)
-            figshow(predict[0][0,  :, :])
-            
-            plt.savefig("/liuzicheng/ljh/hyena-dna/assets/png/"+model.layer['_name_'] + "/" + decoder.__class__.__name__ + "/model_" + 'val' + "." + str(self.account) + ".pred.png")
-            figshow(torch.log(((target + eps) / (normmat_r + eps)))[0, :, :])
-
-            plt.savefig("/liuzicheng/ljh/hyena-dna/assets/png/"+model.layer['_name_'] +"/"+decoder.__class__.__name__ + "/model_" + 'val' + "." + str(self.account) + ".label.png")
         
-        elif prefix=='val' and self.account%100==0:
-            normmat_bydist = np.exp(
-                np.load("/liuzicheng/ljh/orca/resources/resources/4DNFI9GMP2J8.rebinned.mcool.expected.res1000.npy")
-            )[:6]
-            normmat = normmat_bydist[np.abs(np.arange(6)[:, None] - np.arange(6)[None, :])]
-            normmat_r = torch.from_numpy(normmat).float().cuda()
-            eps = torch.min(normmat_r)
-            figshow(predict[0][0,  :, :])
-            plt.savefig("/liuzicheng/ljh/hyena-dna/assets/png/"+model.layer['_name_'] +"/" + decoder.__class__.__name__+ "/model_" + 'train' + "." + str(self.account) + ".pred.png")
-            figshow(torch.log(((target + eps) / (normmat_r + eps)))[0, :, :])
-
-            plt.savefig("/liuzicheng/ljh/hyena-dna/assets/png/"+model.layer['_name_'] + "/" + decoder.__class__.__name__+"/model_" + 'train' + "." + str(self.account) + ".label.png")
 
         
 

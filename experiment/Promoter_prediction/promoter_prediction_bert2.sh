@@ -7,13 +7,13 @@ for dataset in  0_txt; do
         for max_length in 512 1000 2000 3000; do
             python -m train experiment=hg38/GUE \
                     model.d_model=768 \
-                    train.pretrained_model_path=/liuzicheng/ljh/hyena-dna/weight/dnabert2 \
+                    train.pretrained_model_path=/weight/dnabert2 \
                     dataset.dataset_name=$dataset \
                     dataset.tokenizer_name=bert2 \
                     model.layer._name_=bert2 \
                     optimizer.lr=$lr \
                     dataset=promoter_prediction \
-                    dataset.tokenizer_path=/liuzicheng/ljh/hyena-dna/weight/dnabert2 \
+                    dataset.tokenizer_path=/weight/dnabert2 \
                     dataset.max_length=$max_length \
                     trainer.devices=5 \
                     dataset.batch_size=1 \

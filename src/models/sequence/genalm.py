@@ -34,52 +34,7 @@ class DNAEmbeddingGENALM(nn.Module, GenerationMixin):
         self.return_hidden_state = return_hidden_state
         if vocab_size % pad_vocab_size_multiple != 0:
             vocab_size += pad_vocab_size_multiple - (vocab_size % pad_vocab_size_multiple)
-        # self.backbone = LMBackbone(
-        #     d_model=d_model, n_layer=n_layer, d_inner=d_inner, vocab_size=vocab_size,
-        #     process_group=process_group,
-        #     layer=layer, attn_layer_idx=attn_layer_idx, attn_cfg=attn_cfg,
-        #     max_position_embeddings=max_position_embeddings,
-        #     resid_dropout=resid_dropout, embed_dropout=embed_dropout,
-        #     dropout_cls=dropout_cls, layer_norm_epsilon=layer_norm_epsilon,
-        #     initializer_cfg=initializer_cfg, fused_mlp=fused_mlp,
-        #     fused_dropout_add_ln=fused_dropout_add_ln, residual_in_fp32=residual_in_fp32,
-        #     sequence_parallel=sequence_parallel,
-        #     **factory_kwargs, **kwargs
-        # )
-        # parser = argparse.ArgumentParser()
-        # args=parser.parse_args()
-        # args.config_name = '/usr/data/3-new-12w-0'
-        # num_labels = 2
-        # args.task_name='cola'
-        # args.cache_dir = '/usr/data/3-new-12w-0'
-        # args.hidden_dropout_prob = 0.1
-        # args.attention_probs_dropout_prob = 0.1
-        # args.max_seq_length = 1024
-        # args.rnn = 'lstm'
-        # args.num_rnn_layer = 2
-        # args.rnn_dropout = 0.1
-        # args.rnn_hidden = 768
-        # args.do_lower_case = False
-        # args.model_type = 'bert'
-
-        # config = BertConfig.from_pretrained(
-        #     args.config_name,
-        #     num_labels=num_labels,
-        #     finetuning_task=args.task_name,
-        #     cache_dir=args.cache_dir if args.cache_dir else None,
-        # )
         
-        # config.hidden_dropout_prob = args.hidden_dropout_prob
-        # config.attention_probs_dropout_prob = args.attention_probs_dropout_prob
-        # if args.model_type in ["dnalong", "dnalongcat"]:
-        #     assert args.max_seq_length % 512 == 0
-        # config.split = int(args.max_seq_length/512)
-        # config.rnn = args.rnn
-        # config.num_rnn_layer = args.num_rnn_layer
-        # config.rnn_dropout = args.rnn_dropout
-        # config.rnn_hidden = args.rnn_hidden
-        # self.backbone=BertModel(config).from_pretrained('/usr/data/3-new-12w-0')
-        # self.backbone=AutoModel.from_pretrained("/usr/data/GENA_LM/weight/gena_lm_bert",trust_remote_code=True)
         if process_group is None:
             self.lm_head = nn.Linear(d_model, vocab_size, bias=False, **factory_kwargs)
         else:
