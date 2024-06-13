@@ -2,7 +2,9 @@
 
 
 # GenBench: A Comprehensive Benchmark of genomic foundation models
-
+<p align="center" width="100%">
+  <img src='assets/genbench.webp' width="100%">
+</p>
 
 
 ## Introduction
@@ -113,12 +115,12 @@ We support various Genomic foundation models. We are working on add new methods 
     <details open>
     <summary>Currently supported datasets</summary>
 
-    - [x] [Genomic benchmark](https://bmcgenomdata.biomedcentral.com/articles/10.1186/s12863-023-01123-8) (BMC Genomic Data'2023) [[download](https://sites.google.com/berkeley.edu/robotic-interaction-datasets)] [[config](configs/bair)]
-    - [x] [GUE](https://arxiv.org/pdf/2306.15006.pdf) (Arxiv'2023) [[download](https://drive.google.com/file/d/1GRtbzTe3UXYF1oW27ASNhYX3SZ16D7N2/view)] [[config](configs/human)]
-    - [x] [Promoter prediction](https://basespace.illumina.com/projects/66029966/about) (BioRxiv'2023) [[download](https://www.csc.kth.se/cvap/actions/)] [[config](configs/kth)]
-    - [x] [Splice site prediction](https://dl.acm.org/doi/10.1177/0278364913491297) (Cell Press'2019) [[download](https://basespace.illumina.com/projects/66029966/about)] [[config](configs/kitticaltech)]
-    - [x] [Drosophila enhancer activity prediction](https://www.nature.com/articles/s41588-022-01048-5) (Nature Genetics'2022) [[download](https://data.starklab.org/almeida/DeepSTARR/Data/)] [[config](configs/kinetics)]
-    - [x] [Genomic Structure Prediction](https://www.nature.com/articles/s41588-022-01065-4) (Nature Genetics'2022) [[download](https://github.com/jzhoulab/orca?tab=readme-ov-file)] [[config](configs/mmnist)]
+    - [x] [Genomic benchmark](https://www.biorxiv.org/content/10.1101/2022.06.08.495248v1.full) (BMC Genomic Data'2023) [[download](https://huggingface.co/datasets/katielink/genomic-benchmarks/tree/main)] [[config](experiment/genomic_benchmark)]
+    - [x] [GUE](https://arxiv.org/pdf/2306.15006.pdf) (Arxiv'2023) [[download](https://drive.google.com/file/d/1GRtbzTe3UXYF1oW27ASNhYX3SZ16D7N2/view)] [[config](experiment/GUE)]
+    - [x] [Promoter prediction](https://basespace.illumina.com/projects/66029966/about) (BioRxiv'2023) [[download](https://github.com/AIRI-Institute/GENA_LM/tree/main/downstream_tasks/promoter_prediction)] [[config](experiment/Promoter_prediction)]
+    - [x] [Splice site prediction](https://dl.acm.org/doi/10.1177/0278364913491297) (Cell Press'2019) [[download](https://drive.google.com/file/d/1oB0DUrVfz-l0-wAe5_1kDVY5xZ1W4zMF/view?usp=share_link)] [[config](experiment/Splicing_prediction)]
+    - [x] [Drosophila enhancer activity prediction](https://www.nature.com/articles/s41588-022-01048-5) (Nature Genetics'2022) [[download](https://data.starklab.org/almeida/DeepSTARR/Data/)] [[config](experiment/drosophila_enhancer_activity)]
+    - [x] [Genomic Structure Prediction](https://www.nature.com/articles/s41588-022-01065-4) (Nature Genetics'2022) [[download](https://zenodo.org/record/6234936/files/resources_mcools.tar.gz)] [[config](experiment/genomic_structure)]
     
 
     </details>
