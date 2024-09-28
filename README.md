@@ -180,6 +180,7 @@ The framework of GenBench is insipred by [HyenaDNA](https://github.com/HazyResea
 
 - Jiahui Li(jiahuili.jimmy@gmail.com), Westlake University
 - Zicheng Liu(liuzicheng@westlake.edu.cn), Westlake University
+- Lei Xin(9201310419@stu.njau.edu.cn),Westlake University
 
 
 
