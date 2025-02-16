@@ -1,7 +1,7 @@
 
 
 
-#[NIPS 2024] GenBench: A Comprehensive Benchmark of genomic foundation models
+[NIPS 2024] GenBench: A Comprehensive Benchmark of genomic foundation models
 <p align="center" width="100%">
   <img src='assets/genbench.webp' width="100%">
 </p>
